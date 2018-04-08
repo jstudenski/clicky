@@ -9,9 +9,9 @@ import children from "./friends.json";
 class App extends Component {
 
   state = {
-    children
+    children,
     // guessed: [],
-    // score: 0,
+    score: 0
     // topScore: 0
   };
 
@@ -23,7 +23,7 @@ class App extends Component {
     // // this.state.friends.guessed = true
     // this.setState({ friends, guessed });
 
-  //  this.setState({ score: this.state.score + 1 });
+   this.setState({ score: this.state.score + 1 });
 
   }
 
@@ -37,6 +37,7 @@ class App extends Component {
 
   render() {
     return (
+      
       // <div className="App">
       //   <header className="App-header">
       //     <img src={logo} className="App-logo" alt="logo" />
@@ -48,7 +49,8 @@ class App extends Component {
       // </div>
 
       <Wrapper>
-    
+       <p>Click Count: {this.state.score}</p>
+
         {this.state.children.map(friend => (
           <Card
             // removeFriend={this.removeFriend}
