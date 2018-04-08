@@ -3,15 +3,16 @@ import React, { Component } from 'react';
 import './App.css';
 import Wrapper from "./components/Wrapper";
 import Card from "./components/Card";
+import Scoreboard from "./components/Scoreboard";
 import children from "./friends.json";
 
 
 class App extends Component {
 
   state = {
-    children,
+    children // ,
     // guessed: [],
-    score: 0
+    // score: 0
     // topScore: 0
   };
 
@@ -47,9 +48,10 @@ class App extends Component {
       //     To get started, edit <code>src/App.js</code> and save to reload.
       //   </p>
       // </div>
-
+      
       <Wrapper>
-       <p>Click Count: {this.state.score}</p>
+        <Scoreboard></Scoreboard>
+       {/* <p>Click Count: {this.state.score}</p> */}
 
         {this.state.children.map(friend => (
           <Card
