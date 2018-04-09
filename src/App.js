@@ -10,9 +10,9 @@ import children from "./friends.json";
 class App extends Component {
 
   state = {
-    children // ,
+    children,
     // guessed: [],
-    // score: 0
+    score: 0
     // topScore: 0
   };
 
@@ -25,7 +25,7 @@ class App extends Component {
     // this.setState({ friends, guessed });
 
    this.setState({ score: this.state.score + 1 });
-
+   // console.log( this.setState);
   }
 
   // removeFriend = id => {
@@ -50,8 +50,10 @@ class App extends Component {
       // </div>
       
       <Wrapper>
-        <Scoreboard></Scoreboard>
-       {/* <p>Click Count: {this.state.score}</p> */}
+        <Scoreboard
+          score={7}
+        ></Scoreboard>
+       <p>Click Count: {this.state.score}</p>
 
         {this.state.children.map(friend => (
           <Card
