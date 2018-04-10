@@ -3,6 +3,9 @@ import "./Card.css";
 
 const Card = props => (
 
+
+    // guessed state.guessed
+
     <div onClick={() => props.handleClick(props.id)} className="card">
       <div className="img-container">
         {/* <img alt={props.name} src={props.image} /> */}

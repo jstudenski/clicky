@@ -37,6 +37,7 @@ class App extends Component {
   // };
 
   render() {
+    // random 
     return (
       
       // <div className="App">
@@ -51,7 +52,7 @@ class App extends Component {
       
       <Wrapper>
         <Scoreboard
-          score={7}
+          score={this.state.score}
         ></Scoreboard>
        <p>Click Count: {this.state.score}</p>
 

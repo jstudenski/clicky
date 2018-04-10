@@ -3,6 +3,7 @@ import "./Scoreboard.css";
 
 // const Card = props => (
   
+
 class Scoreboard extends React.Component {
   // constructor(props) {
   //   super(props);
@@ -10,7 +11,6 @@ class Scoreboard extends React.Component {
   // }
 
   state = {
-    score: 0,
     topScore: 0
   };
 
@@ -20,9 +20,11 @@ class Scoreboard extends React.Component {
   };
 
   render() {
+    const { score } = this.props;
+
     return (
       <div>
-        <p>Click Count -- {this.state.score}</p>
+        <p>Click Count |||| {score}</p>
         <button onClick={this.handleIncrement}>
           Increment
         </button>
