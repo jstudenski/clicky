@@ -11,7 +11,7 @@ class Scoreboard extends React.Component {
 
   state = {
     score: 0,
-    highscore: 0
+    topScore: 0
   };
 
   handleIncrement = () => {
