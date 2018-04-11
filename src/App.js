@@ -1,31 +1,26 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Wrapper from "./components/Wrapper";
-import Card from "./components/Card";
-import Scoreboard from "./components/Scoreboard";
-import children from "./friends.json";
+import Wrapper from './components/Wrapper';
+import Card from './components/Card';
+import Scoreboard from './components/Scoreboard';
+import children from './friends.json';
 
 
 class App extends Component {
-
   state = {
     children,
     // guessed: [],
-    score: 0
+    score: 0,
     // topScore: 0
   };
+  // const friends = this.state.friends.filter(friend => friend.id !== id);
+  // const guessed = this.state.guessed += 1
+  // // this.state.friends.guessed = true
+  // this.setState({ friends, guessed });
 
-  handleClick = id => {
-
-    // const friends = this.state.friends.filter(friend => friend.id !== id);
-    // const guessed = this.state.guessed += 1
-    
-    // // this.state.friends.guessed = true
-    // this.setState({ friends, guessed });
-
-   this.setState({ score: this.state.score + 1 });
-   // console.log( this.setState);
+  handleClick = (id) => {
+    this.setState({ score: this.state.score + 1 });
   }
 
   // removeFriend = id => {
@@ -37,9 +32,7 @@ class App extends Component {
   // };
 
   render() {
-    // random 
     return (
-      
       // <div className="App">
       //   <header className="App-header">
       //     <img src={logo} className="App-logo" alt="logo" />
@@ -49,12 +42,12 @@ class App extends Component {
       //     To get started, edit <code>src/App.js</code> and save to reload.
       //   </p>
       // </div>
-      
+
       <Wrapper>
         <Scoreboard
           score={this.state.score}
-        ></Scoreboard>
-       <p>Click Count: {this.state.score}</p>
+        />
+        <p>Click Count: {this.state.score}</p>
 
         {this.state.children.map(friend => (
           <Card
@@ -62,10 +55,10 @@ class App extends Component {
             handleClick={this.handleClick}
             id={friend.id}
             key={friend.id}
-            name={friend.name}
+            // name={friend.name}
             image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
+            // occupation={friend.occupation}
+            // location={friend.location}
           />
         ))}
 
