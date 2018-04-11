@@ -2,7 +2,7 @@ import React from "react";
 import "./Scoreboard.css";
 
 // const Card = props => (
-  
+
 
 class Scoreboard extends React.Component {
   // constructor(props) {
