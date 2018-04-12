@@ -1,31 +1,15 @@
 import React from 'react';
 import './Scoreboard.css';
 
-// const Card = props => (
 
 class Scoreboard extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   // this.state = { players: tom_and_jerry }
-  // }
-  state = {
-    topScore: 0,
-  };
-
-  // handleIncrement = () => {
-  //   this.setState({ score: this.state.score + 1 });
-  // };
-
   render() {
-    const { score } = this.props;
-
-    return (
+    return [(
       <div>
-        <p>Click Count | {score}</p>
+        <p>Score | {this.props.score}</p>
+        <p>Top Score | {this.props.topScore}</p>
       </div>
-      // <div>{props.score}</div>
-
-    );
+    )];
   }
 }
 

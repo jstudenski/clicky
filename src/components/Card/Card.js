@@ -1,6 +1,20 @@
 import React from 'react';
 import './Card.css';
 
+const Card = props => (
+  <div
+    onClick={() => props.handleClick()} // props.id
+    className="card"
+    role="presentation"
+  >
+    <div className="content">
+      <strong>ID:</strong> {props.id}
+    </div>
+  </div>
+);
+
+export default Card;
+
 // class Card extends React.Component {
 //   state = {
 //     guessed: false,
@@ -59,22 +73,3 @@ import './Card.css';
 //     // ... The render stuff from before
 //   }
 // }
-
-
-const Card = props => (
-  <div
-    onClick={() => props.handleClick(props.id)}
-    className="card"
-    role="presentation"
-  >
-    <div className="content">
-      <ul>
-        <li>
-          <strong>ID:</strong> {props.id}
-        </li>
-      </ul>
-    </div>
-  </div>
-);
-
-export default Card;
