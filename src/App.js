@@ -25,7 +25,8 @@ class App extends Component {
     this.setState({ score: this.state.score + 1 }),
     this.setState({ topScore: this.state.topScore + 2 }),
     shuffleArray(this.state.children),
-    console.log(id)
+    console.log(this.state.guessed.push(id)),
+    console.log(this.state.guessed)
   );
 
   // removeFriend = id => {
