@@ -12,7 +12,7 @@ class App extends Component {
     children,
     // guessed: [],
     score: 0,
-    // topScore: 0
+    // topScore: 0,
   };
   // const friends = this.state.friends.filter(friend => friend.id !== id);
   // const guessed = this.state.guessed += 1

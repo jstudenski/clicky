@@ -21,7 +21,7 @@ class Scoreboard extends React.Component {
 
     return (
       <div>
-        <p>Click Count |||| {score}</p>
+        <p>Click Count | {score}</p>
       </div>
       // <div>{props.score}</div>
 
