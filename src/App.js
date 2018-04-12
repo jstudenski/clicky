@@ -48,20 +48,18 @@ class App extends Component {
           score={this.state.score}
         />
         <p>Click Count: {this.state.score}</p>
-
-        {this.state.children.map(friend => (
-          <Card
+          {this.state.children.map(friend => (
+            <Card
             // removeFriend={this.removeFriend}
             handleClick={this.handleClick}
             id={friend.id}
-            key={friend.id}
+            // key={friend.id}
             // name={friend.name}
-            image={friend.image}
+            // image={friend.image}
             // occupation={friend.occupation}
             // location={friend.location}
           />
         ))}
-
       </Wrapper>
 
     );
