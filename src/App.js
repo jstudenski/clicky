@@ -20,14 +20,30 @@ class App extends Component {
   // const guessed = this.state.guessed += 1
   // // this.state.friends.guessed = true
   // this.setState({ friends, guessed });
+  handleClick = (id) => {
+    if (this.state.guessed.indexOf(id) === -1) {
+      this.state.guessed.push(id);
+      this.setState({ score: this.state.score + 1 });
+    } else {
+      this.setState({
+        topScore: this.state.score,
+      });
+    }
+    console.log(this.state.guessed);
+    shuffleArray(this.state.children);
 
-  handleClick = id => (
-    this.setState({ score: this.state.score + 1 }),
-    this.setState({ topScore: this.state.topScore + 2 }),
-    shuffleArray(this.state.children),
-    console.log(this.state.guessed.push(id)),
-    console.log(this.state.guessed)
-  );
+    // // push to array if it hasn't been guessed
+    // this.state.guessed.indexOf(id) === -1 && (this.state.guessed.push(id)),
+    // // push to array if it hasn't been guessed
+    // this.state.guessed.indexOf(id) === -1 && (this.setState({ score: this.state.score + 1 })),
+
+    // this.setState({ score: this.state.score + 1 }),
+    // this.setState({ topScore: this.state.topScore + 2 }),
+
+    // console.log(),
+    // console.log(),
+    // console.log(this.state.guessed);
+  };
 
   // removeFriend = id => {
   //   // Filter this.state.friends for friends with an id not equal to the id being removed
