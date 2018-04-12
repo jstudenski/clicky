@@ -7,6 +7,8 @@ import Scoreboard from './components/Scoreboard';
 import children from './friends.json';
 
 
+const shuffleArray = arr => arr.sort(() => Math.random() - 0.5);
+
 class App extends Component {
   state = {
     children,
@@ -22,6 +24,9 @@ class App extends Component {
   handleClick = (id) => {
     this.setState({ score: this.state.score + 1 });
     this.setState({ topScore: this.state.topScore + 2 });
+    shuffleArray(this.state.children);
+    // console.log(id);
+    // console.log()
   }
 
   // removeFriend = id => {
@@ -34,36 +39,19 @@ class App extends Component {
 
   render() {
     return (
-      // <div className="App">
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <h1 className="App-title">Welcome to React</h1>
-      //   </header>
-      //   <p className="App-intro">
-      //     To get started, edit <code>src/App.js</code> and save to reload.
-      //   </p>
-      // </div>
-
       <Wrapper>
         <Scoreboard
           score={this.state.score}
           topScore={this.state.topScore}
         />
         <p>Click Count: {this.state.score}</p>
-          {this.state.children.map(friend => (
-            <Card
-            // removeFriend={this.removeFriend}
+        {this.state.children.map(friend => (
+          <Card
             handleClick={this.handleClick}
             id={friend.id}
-            // key={friend.id}
-            // name={friend.name}
-            // image={friend.image}
-            // occupation={friend.occupation}
-            // location={friend.location}
           />
         ))}
       </Wrapper>
-
     );
   }
 }
