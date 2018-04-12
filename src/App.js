@@ -25,7 +25,7 @@ class App extends Component {
     this.setState({ score: this.state.score + 1 });
     this.setState({ topScore: this.state.topScore + 2 });
     shuffleArray(this.state.children);
-    // console.log(id);
+    console.log(id);
     // console.log()
   }
 
@@ -35,19 +35,19 @@ class App extends Component {
 
   //   // // Set this.state.friends equal to the new friends array
   //   // this.setState({ friends });
-  // };
-
+  // }
   render() {
     return (
       <Wrapper>
         <Scoreboard
+          key={this.state.score}
           score={this.state.score}
           topScore={this.state.topScore}
         />
-        <p>Click Count: {this.state.score}</p>
         {this.state.children.map(friend => (
           <Card
             handleClick={this.handleClick}
+            key={friend.id}
             id={friend.id}
           />
         ))}
