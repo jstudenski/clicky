@@ -3,7 +3,7 @@ import './Card.css';
 
 const Card = props => (
   <div
-    onClick={() => props.handleClick()} // props.id
+    onClick={() => props.handleClick(props.id)} // props.id
     className="card"
     role="presentation"
   >

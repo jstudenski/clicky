@@ -21,13 +21,12 @@ class App extends Component {
   // // this.state.friends.guessed = true
   // this.setState({ friends, guessed });
 
-  handleClick = (id) => {
-    this.setState({ score: this.state.score + 1 });
-    this.setState({ topScore: this.state.topScore + 2 });
-    shuffleArray(this.state.children);
-    console.log(id);
-    // console.log()
-  }
+  handleClick = id => (
+    this.setState({ score: this.state.score + 1 }),
+    this.setState({ topScore: this.state.topScore + 2 }),
+    shuffleArray(this.state.children),
+    console.log(id)
+  );
 
   // removeFriend = id => {
   //   // Filter this.state.friends for friends with an id not equal to the id being removed
