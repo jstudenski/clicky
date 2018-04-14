@@ -27,8 +27,12 @@ class App extends Component {
     } else {
       this.setState({
         topScore: this.state.score,
+        score: 0,
+
+        // reset score and empty guessed array
       });
     }
+
     console.log(this.state.guessed);
     shuffleArray(this.state.children);
 

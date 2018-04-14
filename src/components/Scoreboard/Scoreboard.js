@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import './Scoreboard.css';
 
@@ -10,15 +11,7 @@ const Scoreboard = props => (
 
 export default Scoreboard;
 
-// class Scoreboard extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         <p>Score | {this.props.score}</p>
-//         <p>Top Score | {this.props.topScore}</p>
-//       </div>
-//     );
-//   }
-// }
-
-// export default Scoreboard;
+Scoreboard.propTypes = {
+  score: PropTypes.number.isRequired,
+  topScore: PropTypes.number.isRequired,
+};
