@@ -9,7 +9,8 @@ const Card = props => (
     role="presentation"
   >
     <div className="content">
-      <strong>ID:</strong> {props.id}
+      <img alt={props.image} src={props.image} />
+      {/* <strong>ID:</strong> {props.id} */}
     </div>
   </div>
 );
@@ -17,6 +18,7 @@ const Card = props => (
 Card.propTypes = {
   id: PropTypes.number.isRequired,
   handleClick: PropTypes.func.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default Card;
@@ -49,7 +51,6 @@ export default Card;
 //     ]);
 //   }
 // }
-
 
 //   state = {
 //     guessed: false,

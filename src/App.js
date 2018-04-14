@@ -55,6 +55,7 @@ class App extends Component {
               handleClick={this.handleClick}
               key={friend.id}
               id={friend.id}
+              image={friend.image}
             />
         ))}
         </Wrapper>
