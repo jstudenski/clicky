@@ -33,7 +33,7 @@ class App extends Component {
       });
     }
 
-    console.log(this.state.guessed);
+    // console.log(this.state.guessed);
     shuffleArray(this.state.children);
 
     // // push to array if it hasn't been guessed
