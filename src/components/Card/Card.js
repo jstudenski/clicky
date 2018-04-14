@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import './Card.css';
 
@@ -12,6 +13,11 @@ const Card = props => (
     </div>
   </div>
 );
+
+Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
 
 export default Card;
 
