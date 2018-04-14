@@ -25,10 +25,14 @@ class App extends Component {
       this.state.guessed.push(id);
       this.setState({ score: this.state.score + 1 });
     } else {
+      if (this.state.score > this.state.topScore) {
+        this.setState({
+          topScore: this.state.score,
+        });
+      }
       this.setState({
-        topScore: this.state.score,
         score: 0,
-
+        guessed: [],
         // reset score and empty guessed array
       });
     }
@@ -58,20 +62,28 @@ class App extends Component {
   // }
   render() {
     return (
-      <Wrapper>
-        <Scoreboard
-          key={this.state.score}
-          score={this.state.score}
-          topScore={this.state.topScore}
-        />
-        {this.state.children.map(friend => (
-          <Card
-            handleClick={this.handleClick}
-            key={friend.id}
-            id={friend.id}
+      <div>
+        <header>
+          <p>
+            Clicky Game!
+            Click on an image to earn points, but don&apos;t click on any more than once!
+          </p>
+          <Scoreboard
+            key={this.state.score}
+            score={this.state.score}
+            topScore={this.state.topScore}
           />
+        </header>
+        <Wrapper>
+          {this.state.children.map(friend => (
+            <Card
+              handleClick={this.handleClick}
+              key={friend.id}
+              id={friend.id}
+            />
         ))}
-      </Wrapper>
+        </Wrapper>
+      </div>
     );
   }
 }

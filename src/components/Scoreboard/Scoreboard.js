@@ -4,8 +4,8 @@ import './Scoreboard.css';
 
 const Scoreboard = props => (
   <div>
-    <p>Score | {props.score}</p>
-    <p>Top Score | {props.topScore}</p>
+    <p>Score: {props.score}</p>
+    <p>Top Score: {props.topScore}</p>
   </div>
 );
 

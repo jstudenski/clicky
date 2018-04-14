@@ -1,0 +1,8 @@
+div {
+  float: right;
+}
+P {
+  display: inline-block;
+  margin-right: 25px;
+  color: #fff;
+}
